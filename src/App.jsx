@@ -6,6 +6,7 @@ import NoResultDiv from "./components/NoResultDiv";
 
 
 function App() {
+  const api_key=import.meta.env.VITE_API_KEY
   const [data,setData]=useState();
   const [hourlyForecast,setHourlyForecast]=useState([]);
   const [noResult, setNoResult]=useState(false);
@@ -36,7 +37,6 @@ function App() {
   }
   //setting the default city as Cairo
   useEffect(()=>{
-    const api_key=import.meta.env.VITE_API_KEY
     const API_URL=`http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=Cairo&days=2`;
       //console.log(searchInput.value)
       fetchAPIData(API_URL);
