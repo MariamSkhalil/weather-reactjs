@@ -37,7 +37,8 @@ function App() {
   }
   //setting the default city as Cairo
   useEffect(()=>{
-    const API_URL=`http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=Cairo&days=2`;
+    // console.log("api_key",api_key)
+    const API_URL=`https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=Cairo&days=2`;
       //console.log(searchInput.value)
       fetchAPIData(API_URL);
   },[])
